@@ -1,0 +1,52 @@
+
+
+version: '3.8' 
+
+services: 
+  
+  db: 
+    image: mysql:8.0 # Utilise l'image officielle de MySQL, version 8.0
+    container_name: mysql_db_reco 
+    restart: always 
+    
+    environment: 
+      #MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'  #  autoriser l’absence de mot de passe
+      MYSQL_ROOT_PASSWORD: 'rootpassword'
+      MYSQL_DATABASE: movielens         
+    
+    
+    command: --default-authentication-plugin=mysql_native_password  
+      
+    ports: 
+      - "3306:3306" 
+      
+    volumes: 
+      
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      
+      - mysql_data:/var/lib/mysql
+
+    
+  mlflow:
+    build: ./mlflow
+    
+    container_name: mlflow_server_reco
+    restart: always
+    ports:
+      - "5000:5000" 
+
+    volumes:
+      - ./mlruns:/mlruns
+        
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri mysql+pymysql://root:rootpassword@db:3306/movielens
+      --default-artifact-root /mlruns
+      --serve-artifacts
+    depends_on:
+      - db 
+
+volumes: 
+  mysql_data:

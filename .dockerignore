@@ -1,0 +1,39 @@
+
+# utiliser juste pour avoir un conteneur de taille resonable surtout au debut lorsqu'on a utiliser de fichiers csv avant d'utiliser la bdd  
+
+# Fichier: .dockerignore
+
+# Ignorer les environnements virtuels locaux de Python
+#.venv/
+#env/
+#venv/
+
+# Ignorer les caches et les fichiers compilés de Python
+#__pycache__/
+#*.pyc
+#*.pyo
+#*.pyd
+
+# Ignorer les dossiers contenant les données et les modèles
+# Ces fichiers seront montés via des volumes, pas inclus dans l'image.
+#data/
+#models/
+
+# Ignorer la configuration de l'IDE
+#.vscode/
+#.idea/
+
+# Ignorer la configuration de Git
+#.git/
+#.gitignore
+
+# Ignorer les dossiers de build et de distribution de Python
+#build/
+#dist/
+#*.egg-info/
+
+# Ignorer les fichiers spécifiques au système d'exploitation
+#.DS_Store
+#Thumbs.db
+
+

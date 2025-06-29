@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pandas
+python-multipart
+scikit-surprise
+numpy==1.26.4
+sqlalchemy
+mysql-connector-python
+zenml
+mlflow
+
+# il y a des biblio et modules qui sont déja installé via conda pour le local, mais reste ici pour Docker
