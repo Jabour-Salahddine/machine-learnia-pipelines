@@ -10,3 +10,6 @@ local_stores/
 venv/
 __pycache__/
 __init__/
+
+
+step1/
