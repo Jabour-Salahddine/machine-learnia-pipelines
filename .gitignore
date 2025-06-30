@@ -1,14 +1,26 @@
-# Ignorer les fichiers ZenML
-#.zenml/
-#.cache/
-#local_stores/
-.zen/
-
-# Autres exemples
-#*.log
-#*.tmp
-#venv/
+# Python cache files
 __pycache__/
-__init__/
+*.py[cod]
+*.so
 
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Config files
+.env
+
+# Tes dossiers spécifiques
+.zen/
 step1/
