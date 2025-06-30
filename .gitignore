@@ -1,15 +1,14 @@
 # Ignorer les fichiers ZenML
-.zenml/
-.cache/
-local_stores/
+#.zenml/
+#.cache/
+#local_stores/
 .zen/
 
 # Autres exemples
-*.log
-*.tmp
-venv/
+#*.log
+#*.tmp
+#venv/
 __pycache__/
 __init__/
-
 
 step1/
