@@ -1,0 +1,10 @@
+# Ignorer les fichiers ZenML
+.zenml/
+.cache/
+local_stores/
+
+# Autres exemples
+*.log
+*.tmp
+venv/
+__pycache__/
