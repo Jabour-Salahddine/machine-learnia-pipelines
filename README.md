@@ -24,6 +24,8 @@ The tracked training pipeline and the CSV-backed API are separate execution path
 
 The [exploration notebook](training%20model/Syst%C3%A8me%20de%20Recommandation%20de%20Films.ipynb) includes a recorded **test RMSE of 0.7865**. This is an existing notebook output, not a result reproduced in this documentation update.
 
+**Notebook context.** The notebook records the experimentation phase, including the NumPy/Surprise compatibility issue and its workaround. The pipeline implementation carries that fix into [requirements.txt](requirements.txt) by pinning NumPy to version 1.26.4. For the reference implementation, follow the [training pipeline](pipelines/training_pipeline.py) and its [Surprise model adapter](surprise_wrapper.py).
+
 In the scripted pipeline, ingestion samples up to 1,000 MySQL ratings. Training uses the full ingested sample and evaluation samples 20% of that same data. Its logged RMSE therefore measures fit on overlapping data and must not be interpreted as an independent test score.
 
 ## Run the training workflow
