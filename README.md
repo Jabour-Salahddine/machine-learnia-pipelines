@@ -1,5 +1,9 @@
-# Movie Recommendations — From Ratings to a Tracked Model
+# Movie Recommendations - From Ratings to a Tracked Model
 ### Recommend unseen films, and keep the training process inspectable.
+
+**Note:** This project demonstrates the general workflow of a solid machine learning project. Although it may have some imperfections, it was a valuable learning experience that helped me strengthen my knowledge and practical skills.
+
+I'm always happy to discuss this project, other projects in my repositories, or any topic related to AI and Data Science. Feel free to reach out!
 
 A movie recommendation service needs to handle both returning viewers and people it has never seen. The FastAPI application scores unseen movies for a known user with Surprise SVD; for an unknown user, it returns highly rated movies with more than 50 ratings.
 
